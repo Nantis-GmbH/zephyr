@@ -1,0 +1,29 @@
+# Copyright (c) 2025
+# SPDX-License-Identifier: Apache-2.0
+
+description: |
+  STMicroelectronics STC3115/STC3117 battery fuel gauge.
+
+  The driver configures the mixed-mode gas gauge using the battery design
+  capacity, current sense resistor, and internal battery resistance values
+  supplied in devicetree.
+
+compatible: "st,stc311x"
+
+include: [i2c-device.yaml, fuel-gauge.yaml]
+
+properties:
+  design-capacity:
+    type: int
+    required: true
+    description: Nominal battery capacity in mAh.
+
+  rsense-milliohm:
+    type: int
+    required: true
+    description: Value of the external current sense resistor in milliohm.
+
+  battery-internal-resistance-milliohm:
+    type: int
+    required: true
+    description: Estimated average battery internal resistance in milliohm.

@@ -30,6 +30,7 @@ source "drivers/fuel_gauge/lc709203f/Kconfig"
 source "drivers/fuel_gauge/ltc2959/Kconfig"
 source "drivers/fuel_gauge/max17048/Kconfig"
 source "drivers/fuel_gauge/sbs_gauge/Kconfig"
+source "drivers/fuel_gauge/stc311x/Kconfig"
 source "drivers/fuel_gauge/sy24561/Kconfig"
 # zephyr-keep-sorted-stop
 

@@ -1,0 +1,10 @@
+# Copyright (c) 2025
+# SPDX-License-Identifier: Apache-2.0
+
+config STC311X
+	bool "STC311x fuel gauge"
+	default y
+	depends on DT_HAS_ST_STC311X_ENABLED
+	select I2C
+	help
+	  Enable the STMicroelectronics STC3115/STC3117 fuel gauge driver.
